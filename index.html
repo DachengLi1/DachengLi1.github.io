@@ -93,18 +93,18 @@
                 <name>Dacheng Li</name>
               </p>
               <p>
-                I am a first-year PhD at EECS, UC Berkeley with Prof. <a href="https://people.eecs.berkeley.edu/~istoica/"> Ion Stoica </a> and Prof. <a href="https://people.eecs.berkeley.edu/~jegonzal/"> Joseph Gonzalez </a>, affliated with <a href="https://sky.cs.berkeley.edu"> Sky </a> and <a href="https://bair.berkeley.edu"> BAIR </a>. 
-                I obtained my master in Machine Learning at CMU with Prof. <a href="http://www.cs.cmu.edu/~epxing/"> Eric Xing </a> and Prof. <a href="https://people.eecs.berkeley.edu/~hao/"> Hao Zhang </a>. I obtained my undergraduate at UC San Diego with Prof. <a href="https://pages.ucsd.edu/~ztu/"> Zhuowen Tu </a>.
+                I am a CS PhD at EECS, UC Berkeley with Prof. <a href="https://people.eecs.berkeley.edu/~istoica/"> Ion Stoica </a> and Prof. <a href="https://people.eecs.berkeley.edu/~jegonzal/"> Joseph Gonzalez </a>, affliated with <a href="https://sky.cs.berkeley.edu"> Sky </a> and <a href="https://bair.berkeley.edu"> BAIR </a>. 
+                I obtained my master in Machine Learning at CMU with Prof. <a href="http://www.cs.cmu.edu/~epxing/"> Eric Xing </a> and Prof. <a href="https://people.eecs.berkeley.edu/~hao/"> Hao Zhang </a>. I obtained my undergraduate with double majors in Computer Science and Mathematics at UC San Diego with Prof. <a href="https://pages.ucsd.edu/~ztu/"> Zhuowen Tu </a>.
                 <br>
                 <br>
-                I study large-scale Machine Learning in the intersection of ML and distributed systems. My goal is to support performant models at scale, and develop easily usable frameworks for people, to facilitate ML deployment in the real world. I work on LLMs, distributed ML training, privacy-preserving ML serving, and large-scale ML algorithms.
+                I study Machine Learning, in the context of modeling performance, scaling, system efficiency, framework usability, and theoratical support. 
                 <br>
                 <br>
                 Also check out my girlfriend's <a href="https://rulinshao.github.io"> webpage </a>. She is a CS PhD at UW, and she is great!
               </p>
               <p align=center>
                 <a href="https://scholar.google.com/citations?user=4TV2MOwAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://github.com/MccRee177"> GitHub </a> &nbsp/&nbsp
+                <a href="https://github.com/DachengLi1"> GitHub </a> &nbsp/&nbsp
                 <a href="Resume.pdf"> Resume </a> &nbsp/&nbsp
                 <a href="SOP.pdf"> SoP </a> &nbsp/&nbsp
                 <a href="https://twitter.com/DachengLi177"> Twitter </a>
@@ -137,22 +137,58 @@
         </table>
 
         <!-- Researches -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Research</heading>
-              <!-- <p>
-                I'm interested in computer vision, machine learning, statistics, optimization, image processing, virtual reality, and computational photography. Much of my research is about inferring the physical world (shape, depth, motion, paint,
-                light, colors, etc) from images. I have also worked in astronomy and biology. Representative papers are <span class="highlight">highlighted</span>.
-              </p> -->
-            </td>
-          </tr>
-        </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
           <!-- Projects -->
+          <tr>
+            <td width="25%" id="Slora_arxiv-img"></td>
+            <td valign="top" width="75%" id="Slora_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "Slora_arxiv", {
+              title: "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
+              paper_url: "https://arxiv.org/pdf/2311.03285.pdf",
+              authors: "Ying Sheng*, Shiyi Cao*, Dacheng Li, Coleman Hooper, Nicholas Lee, Shuo Yang, Christopher Chou, Banghua Zhu, Lianmin Zheng, Kurt Keutzer, Joseph E. Gonzalez, Ion Stoica",
+              conference: "Under submission to MLsys'24",
+              image: "figures/Slora.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="lightseq_arxiv-img"></td>
+            <td valign="top" width="75%" id="lightseq_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "lightseq_arxiv", {
+              title: "LightSeq: sequence level parallelism for distributed training of long context transformers",
+              paper_url: "https://arxiv.org/pdf/2310.03294.pdf",
+              authors: "Dacheng Li*, Rulin Shao*, Anze Xie, Eric P. Xing, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, Hao Zhang",
+              conference: "Under submission to ICLR'24",
+              image: "figures/LightSeq.png",
+              others: null
+            });
+          </script>
 
+          <tr>
+            <td width="25%" id="longchat_nips23-img"></td>
+            <td valign="top" width="75%" id="longchat_nips23-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "longchat_nips23", {
+              title: "How long can opensource llms truly promise on context length",
+              paper_url: "https://lmsys.org/blog/2023-06-29-longchat/",
+              authors: "Dacheng Li*, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, and Hao Zhang",
+              conference: "NeurIPS 2023 Instruction following workshop",
+              image: "figures/LongChat.png",
+              others: null
+            });
+          </script>
+          
           <tr>
             <td width="25%" id="amp_nips22-img"></td>
             <td valign="top" width="75%" id="amp_nips22-txt"></td>
