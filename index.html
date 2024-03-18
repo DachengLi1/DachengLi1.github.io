@@ -142,6 +142,38 @@
 
           <!-- Projects -->
           <tr>
+            <td width="25%" id="arena_arxiv-img"></td>
+            <td valign="top" width="75%" id="arena_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "arena_arxiv", {
+              title: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+              paper_url: "https://arxiv.org/pdf/2403.04132.pdf",
+              authors: "Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, Anastasios N. Angelopoulos, Tianle Li, <b>Dacheng Li</b>, Banghua Zhu, Hao Zhang, Michael I. Jordan, Joseph E. Gonzalez, Ion Stoica",
+              conference: "Under submission to ICML'24",
+              image: "figures/chatbot_arena.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="fairness_arxiv-img"></td>
+            <td valign="top" width="75%" id="fairness_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "fairness_arxiv", {
+              title: "Fairness in Serving Large Language Models",
+              paper_url: "https://arxiv.org/pdf/2401.00588.pdf",
+              authors: "Ying Sheng, Shiyi Cao, <b>Dacheng Li</b>, Banghua Zhu, Zhuohan Li, Danyang Zhuo, Joseph E. Gonzalez, Ion Stoica",
+              conference: "Under submission to OSDI'24",
+              image: "figures/fairness.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
             <td width="25%" id="Slora_arxiv-img"></td>
             <td valign="top" width="75%" id="Slora_arxiv-txt"></td>
           </tr>
@@ -151,7 +183,7 @@
               title: "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
               paper_url: "https://arxiv.org/pdf/2311.03285.pdf",
               authors: "Ying Sheng*, Shiyi Cao*, <b>Dacheng Li</b>, Coleman Hooper, Nicholas Lee, Shuo Yang, Christopher Chou, Banghua Zhu, Lianmin Zheng, Kurt Keutzer, Joseph E. Gonzalez, Ion Stoica",
-              conference: "Under submission to MLsys'24",
+              conference: "MLsys'24",
               image: "figures/Slora.png",
               others: null
             });
@@ -263,7 +295,7 @@
               title: "Does compressing activations help model parallel training?",
               paper_url: "https://arxiv.org/pdf/2301.02654.pdf",
               authors: "Song Bian*, <b> Dacheng Li* </b>, Hongyi Wang, Eric P. Xing, Shivaram Venkataraman",
-              conference: "Under submission to MLSys'24",
+              conference: "MLSys'24",
               image: "figures/compression_mlsys23.PNG",
               others: null
             });
