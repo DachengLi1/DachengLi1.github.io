@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name=viewport content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <title>Publications - Dacheng Li</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="seal_icon.png">
+  <script src="./utils.js"></script>
+  <style type="text/css">
+    /* Copy all existing styles from index.html */
+    body {
+      background-color: white;
+      color: #333;
+    }
+    /* ... include all other styles from index.html ... */
+    /* Add header image styles */
+    .header-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Replace old header with Sky Lab style header -->
+  <div style="background-color: transparent; width: 100%; padding: 15px 0;">
+    <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <span style="font-family: 'Lato', sans-serif; font-size: 24px;">
+            <a href="index.html" style="color: #FDB515; text-decoration: none;">UC Berkeley</a>
+            <a href="https://sky.cs.berkeley.edu" style="color: black; text-decoration: none;">Sky Computing Lab</a>
+          </span>
+          <span style="float: right;">
+            <a href="index.html" style="color: #FDB515; margin-left: 20px; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#FDB515'">Home</a>
+            <a href="publications.html" style="color: #FDB515; margin-left: 20px; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#FDB515'">Publications</a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td>
+              <heading style="color: #FDB515; font-size: 24px;">Publications</heading>
+              <p>See my <a href="https://scholar.google.com/citations?user=vEYUIioAAAAJ&hl=en">Google Scholar</a> for the latest list.</p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Publications List -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <!-- Chatbot Arena -->
+          <tr>
+            <td width="25%" id="arena_arxiv-img"></td>
+            <td valign="top" width="75%" id="arena_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "arena_arxiv", {
+              title: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+              paper_url: "https://arxiv.org/pdf/2403.04132.pdf",
+              authors: "Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, Anastasios N. Angelopoulos, Tianle Li, <b>Dacheng Li</b>, Banghua Zhu, Hao Zhang, Michael I. Jordan, Joseph E. Gonzalez, Ion Stoica",
+              conference: "ICML'24",
+              image: "figures/chatbot_arena.png",
+              others: null
+            });
+          </script>
+
+          <!-- Fairness -->
+          <tr>
+            <td width="25%" id="fairness_arxiv-img"></td>
+            <td valign="top" width="75%" id="fairness_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "fairness_arxiv", {
+              title: "Fairness in Serving Large Language Models",
+              paper_url: "https://arxiv.org/pdf/2401.00588.pdf",
+              authors: "Ying Sheng, Shiyi Cao, <b>Dacheng Li</b>, Banghua Zhu, Zhuohan Li, Danyang Zhuo, Joseph E. Gonzalez, Ion Stoica",
+              conference: "OSDI'24",
+              image: "figures/fairness.png",
+              others: null
+            });
+          </script>
+
+          <!-- Projects -->
+          <tr>
+            <td width="25%" id="Slora_arxiv-img"></td>
+            <td valign="top" width="75%" id="Slora_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "Slora_arxiv", {
+              title: "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
+              paper_url: "https://arxiv.org/pdf/2311.03285.pdf",
+              authors: "Ying Sheng*, Shiyi Cao*, <b>Dacheng Li</b>, Coleman Hooper, Nicholas Lee, Shuo Yang, Christopher Chou, Banghua Zhu, Lianmin Zheng, Kurt Keutzer, Joseph E. Gonzalez, Ion Stoica",
+              conference: "MLsys'24",
+              image: "figures/Slora.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="lightseq_arxiv-img"></td>
+            <td valign="top" width="75%" id="lightseq_arxiv-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "lightseq_arxiv", {
+              title: "LightSeq: sequence level parallelism for distributed training of long context transformers",
+              paper_url: "https://arxiv.org/pdf/2310.03294.pdf",
+              authors: "<b>Dacheng Li*</b>, Rulin Shao*, Anze Xie, Eric P. Xing, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, Hao Zhang",
+              conference: "Under submission to ICLR'24",
+              image: "figures/LightSeq.png",
+              others: null
+            });
+          </script>
+
+          <tr>
+            <td width="25%" id="longchat_nips23-img"></td>
+            <td valign="top" width="75%" id="longchat_nips23-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "longchat_nips23", {
+              title: "How long can opensource llms truly promise on context length",
+              paper_url: "https://lmsys.org/blog/2023-06-29-longchat/",
+              authors: "<b> Dacheng Li*</b>, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, and Hao Zhang",
+              conference: "NeurIPS 2023 Instruction following workshop",
+              image: "figures/LongChat.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="amp_nips22-img"></td>
+            <td valign="top" width="75%" id="amp_nips22-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "amp_nips22", {
+              title: "AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness",
+              paper_url: "https://arxiv.org/abs/2210.07297",
+              authors: "<b> Dacheng Li </b>, Hongyi Wang, Eric P. Xing, Hao Zhang",
+              conference: "36th Conference on Neural Information Processing Systems (NeurIPS 2022)",
+              image: "figures/amp_nips22.PNG",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="dcvae_cvpr21-img"></td>
+            <td valign="top" width="75%" id="dcvae_cvpr21-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "dcvae_cvpr21", {
+              title: "Dual Contradistinctive Generative AutoEncoder",
+              paper_url: "https://openaccess.thecvf.com/content/CVPR2021/papers/Parmar_Dual_Contradistinctive_Generative_Autoencoder_CVPR_2021_paper.pdf",
+              authors: "Gaurav Parmar*, <b> Dacheng Li* </b>, Kwonjoon Lee*, Zhuowen Tu",
+              conference: "2021 Conference on Computer Vision and Pattern Recognition (CVPR 2021)",
+              image: "figures/dcvae_cvpr21.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="mpcformer_iclr23-img"></td>
+            <td valign="top" width="75%" id="mpcformer_iclr23-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "mpcformer_iclr23", {
+              title: "MPCFORMER: FAST, PERFORMANT AND PRIVATE TRANSFORMER INFERENCE WITH MPC",
+              paper_url: "http://arxiv.org/abs/2211.01452",
+              authors: "<b> Dacheng Li* </b>, Rulin Shao*, Hongyi Wang*, Han Guo, Eric P. Xing, Hao Zhang",
+              conference: "ICLR'23 (Spotlight)",
+              image: "figures/mpcformer_iclr23.PNG",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="vicuna_arxiv23-img"></td>
+            <td valign="top" width="75%" id="vicuna_arxiv23-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "vicuna_arxiv23", {
+              title: "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena",
+              paper_url: "https://arxiv.org/pdf/2306.05685.pdf",
+              authors: "Zheng Lianmin*, Wei-Lin Chiang*, Ying Sheng*, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, <b> Dacheng Li </b>, Eric. P Xing, Hao Zhang, Joseph E. Gonzalez, Ion Stoica",
+              conference: "Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 23)",
+              image: "figures/vicuna_arxiv.png",
+              others: null
+            });
+          </script>
+          
+          <tr>
+            <td width="25%" id="compression_mlsys23-img"></td>
+            <td valign="top" width="75%" id="compression_mlsys23-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "compression_mlsys23", {
+              title: "Does compressing activations help model parallel training?",
+              paper_url: "https://arxiv.org/pdf/2301.02654.pdf",
+              authors: "Song Bian*, <b> Dacheng Li* </b>, Hongyi Wang, Eric P. Xing, Shivaram Venkataraman",
+              conference: "MLSys'24",
+              image: "figures/compression_mlsys23.PNG",
+              others: null
+            });
+          </script>
+        </table>
+
+        <!-- Awards -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading style="color: #FDB515; font-size: 24px;">Awards</heading>
+              <!-- <p>
+                I'm interested in computer vision, machine learning, statistics, optimization, image processing, virtual reality, and computational photography. Much of my research is about inferring the physical world (shape, depth, motion, paint,
+                light, colors, etc) from images. I have also worked in astronomy and biology. Representative papers are <span class="highlight">highlighted</span>.
+              </p> -->
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="25%" id="secure_inference_ara-img"></td>
+            <td valign="top" width="75%" id="secure_inference_ara-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "secure_inference_ara", {
+              title: "A Faster and More Accurate Secure Model Serving Framework on the Cloud",
+              authors: "PI: Eric P. Xing",
+              paper_url: "awards/amazon_funding_secure_serving.pdf",
+              conference: "Amazon Research Awards ($80000)",
+              image: "figures/secure_inference_ara.PNG",
+              others: null
+            });
+          </script>
+          
+          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-7580334-1");
+              pageTracker._trackPageview();
+            } catch (err) {}
+          </script>
+        </td>
+      </tr>
+    </table>
+  </table>
+</body>
+</html>

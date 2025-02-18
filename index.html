@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 
@@ -7,16 +6,22 @@
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
     /* Template from Han Guo */
+    body {
+      background-color: rgba(255, 215, 0, 0.00);  /* Very light gold with 5% opacity */
+      color: #333;
+    }
 
     a {
-      color: #1772d0;
+      color: #002676;  /* Corrected Berkeley Blue */
       text-decoration: none;
+      font-weight: bold;  /* Make all hyperlink text bold */
     }
 
     a:focus,
     a:hover {
-      color: #f09228;
+      color: #FDB515;  /* Keeping the hover color as is */
       text-decoration: none;
+      font-weight: bold;  /* Keep bold on hover */
     }
 
     body,
@@ -36,7 +41,11 @@
 
     heading {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
+      font-size: 24px;
+      color: #FDB515;
+      font-weight: bold;
+      margin: 20px 0;
+      display: block;
     }
 
     papertitle {
@@ -48,6 +57,7 @@
     name {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 35px;
+      color: #FDB515;
     }
 
     .one {
@@ -74,6 +84,90 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    /* Make news section more readable */
+    .news-container {
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #e1e8ed;
+      padding: 15px;
+      background-color: rgba(255, 215, 0, 0.08);  /* Slightly darker gold for contrast */
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Enhance project cards */
+    td[valign="top"] {
+      padding: 15px;
+      background-color: rgba(255, 215, 0, 0.08);  /* Matching news container */
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Add new styles for dropdown */
+    .dropdown {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: rgba(255, 215, 0, 0.08);  /* Matching other elements */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropbtn {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dropbtn:hover {
+      background-color: #1a252f;
+    }
+
+    /* Add header image styles */
+    .header-image {
+      width: 100%;
+      height: 400px;  /* Increased from 300px to show more of the image */
+      object-fit: contain;  /* Changed from 'cover' to 'contain' to show full image */
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: rgba(255, 215, 0, 0.05);  /* Match body background */
+    }
+
+    /* Add style for research interests */
+    .research-interests {
+      color: #FDB515;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
   </style>
   <link rel="icon" type="image/png" href="seal_icon.png">
   <title>Dacheng Li</title>
@@ -83,6 +177,25 @@
 </head>
 
 <body>
+  <!-- Replace dropdown with Sky Lab style header -->
+  <div style="background-color: transparent; width: 100%; padding: 15px 0;">
+    <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <span style="font-family: 'Lato', sans-serif; font-size: 24px;">
+            <a href="index.html" style="color: #FDB515; text-decoration: none;">UC Berkeley</a>
+            <a href="https://sky.cs.berkeley.edu" style="color: black; text-decoration: none;">Sky Computing Lab</a>
+          </span>
+          <span style="float: right;">
+            <a href="index.html" style="color: #FDB515; margin-left: 20px; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#FDB515'">Home</a>
+            <a href="publications.html" style="color: #FDB515; margin-left: 20px; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#FDB515'">Publications</a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Remove old dropdown menu and header image -->
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
       <td>
@@ -93,14 +206,16 @@
                 <name>Dacheng Li</name>
               </p>
               <p>
-                I am a second-year CS PhD at EECS, UC Berkeley, fortunately advised by Prof. <a href="https://people.eecs.berkeley.edu/~istoica/"> Ion Stoica </a> and Prof. <a href="https://people.eecs.berkeley.edu/~jegonzal/"> Joseph Gonzalez </a> in <a href="https://lmsys.org">lmsys</a>, <a href="https://sky.cs.berkeley.edu">Sky</a> and <a href="https://bair.berkeley.edu">BAIR</a>. I also have the fortunate to work closely with Prof. <a href="https://hanlab.mit.edu/songhan"> Song Han </a> (MIT). I study Machine Learning and system in full stack. My goal is to develop and support performant models to faciliate intelligence in the real world. 
+                I am a second-year CS PhD at EECS, UC Berkeley, fortunately advised by Prof. <a href="https://people.eecs.berkeley.edu/~istoica/"> Ion Stoica </a> and Prof. <a href="https://people.eecs.berkeley.edu/~jegonzal/"> Joseph Gonzalez </a>. I also have the fortunate to work closely with Prof. <a href="https://hanlab.mit.edu/songhan"> Song Han </a> (MIT).
+                I am affliated with <a href="https://sky.cs.berkeley.edu">Sky Computing Lab</a> and <a href="https://bair.berkeley.edu">Berkeley AI Group (BAIR)</a>.
+                I am co-leading <a href="https://novasky-ai.github.io">NovaSky</a> and the 1st new member of <a href="https://lmsys.org">lmsys</a>.
                 <br>
                 <br>
-                Previously, I obtained my master in Machine Learning at CMU with Prof. <a href="http://www.cs.cmu.edu/~epxing/"> Eric Xing </a> and Prof. <a href="https://cseweb.ucsd.edu/~haozhang"> Hao Zhang </a>. I obtained my undergraduate with double majors in Computer Science and Mathematics at UC San Diego with Prof. <a href="https://pages.ucsd.edu/~ztu/"> Zhuowen Tu </a>. I interned at Nvidia Research and Google.
+                Previously, I obtained my master in Machine Learning at CMU with Prof. <a href="http://www.cs.cmu.edu/~epxing/"> Eric Xing </a>, where I also worked with Prof. <a href="https://cseweb.ucsd.edu/~haozhang"> Hao Zhang </a>. 
+                I obtained my undergraduate with double majors in Computer Science and Mathematics at UC San Diego with Prof. <a href="https://pages.ucsd.edu/~ztu/"> Zhuowen Tu </a>. I interned at Nvidia Research and Google.
                 <br>
                 <br>
-                <br>
-                Also check out my girlfriend's <a href="https://rulinshao.github.io"> webpage </a>. She is a Computer Science PhD at UW working with Prof. Luke Zettlemoyer and Prof. Pang Wei Koh.
+                Extened acknowledgment to my <a href="https://rulinshao.github.io"> girlfriend</a> (PhD at UW).
               </p>
               <p align=center>
                 <a href="https://scholar.google.com/citations?user=vEYUIioAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
@@ -116,243 +231,109 @@
             </td>
           </tr>
         </table>
-
-
-        <!-- News -->
+        
+        <!-- Research Interests -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
-            <td width="60%" valign="middle">
-              <heading>News</heading>
-              <ul>
-                <li> <b>2025-1</b> Released <a href="https://novasky-ai.github.io/posts/sky-t1/" > Sky-T1-32B-Preview </a>, a fully open-sourced reasoning model.  </li>
-                <li> <b>2025-1</b> Started <a href="https://novasky-ai.github.io/posts/about-us/" > NovaSky </a> that targets the next-generation of open AI models.  </li>
-                <li> <b>2024-12</b> Honored to receive the finalist award from <a href="https://blogs.nvidia.com/blog/graduate-fellowship-recipients-2025-2026/" > Nvidia 2025-2026 Fellowship</a>.  </li>
-                <li> <b>2024-08</b> Released <a href="https://www.arxiv.org/pdf/2408.10188"> LongVila</a>, a seris of long-context VLM for videos. </li>
-                <li> <b>2024-08</b> Released <a href="https://arxiv.org/pdf/2408.03561"> Marill</a>, an efficient MPC framework for LLMs, extending the idea in MPCFormer. </li>
-                <li> <b>2024-07</b> <a href="https://arxiv.org/pdf/2310.03294">DistFlashAttn</a> is accepted to <i>COLM'2024</i>. </li>
-                <li> <b>2024-06</b> Joined Nvidia as a research intern, working on multi-modal foundation models with Prof. Han. </li>
-                <li> <b>2024-05</b> <a href="https://arxiv.org/pdf/2403.04132"> Chatbot Arena</a> is accepted to <i>ICML'2024</i>. </li>
-                <li> <b>2024-03</b> <a href="https://arxiv.org/pdf/2401.00588"> VTC</a> is accepted to <i>OSDI'2024</i>. </li>
-                <li> <b>2024-02</b> <a href="https://arxiv.org/pdf/2311.03285"> S-lora</a> and <a href="https://proceedings.mlsys.org/paper_files/paper/2024/file/71381211d0abef73ed1887b83c4547b1-Paper-Conference.pdf"> MCBench</a> are accepted to <i>MLsys'2024</i>. </li>
-                <li> <b>2023-09</b> The official paper of <a href="https://lmsys.org/blog/2023-03-30-vicuna/">Vicuna</a> (<a href="https://arxiv.org/pdf/2306.05685">LLM-as-a-judge</a>) is accepted to <i>Neurips'2024</i>. </li>
-                <li> <b>2023-08</b> Joined Google as a student researcher, working on LLMs evaluation. </li>
-                <li> <b>2023-06</b> Released a series of long-context models and evaluation toolkits <a href="https://github.com/DachengLi1/LongChat">LongChat</a>. </li>
-                <li> <b>2023-04</b> Released a compact open-sourced chatbot <a href="https://github.com/lm-sys/FastChat">FastChat-T5</a>.</li>
-                <li> <b>2023-01</b> <a href="https://arxiv.org/pdf/2211.01452">MPCFormer</a> is accepted at <i>ICLR'2023</i> as spotlight. </li>
-                <li> <b>2022-12</b> A secure LLMs serving proposal is accepted at Amazon Research Awards. </li>
-                <li> <b>2022-10</b> <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/2b4bfa1cebe78d125fefd7ea6ffcfc6d-Paper-Conference.pdf">AMP</a> is accepeted at <i>Neurips'2022</i>. </li>
-                <li> <b>2021-03</b> <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Parmar_Dual_Contradistinctive_Generative_Autoencoder_CVPR_2021_paper.pdf">DC-VAE</a> is accepted at <i>CVPR'2021</i>. </li>
-              </ul>
+            <td width="100%" valign="middle">
+              <heading>Research Interests</heading>
+              <br>
+                I study Machine Learning and distributed system from all experience. In my second year, I am building a single next-generation system with all my experience.
+                <br>
+              <p>
+                <span style="color: #002676; font-size: 20px; font-weight: bold;">Machine Learning Systems (MLSys)</span>
+                <br>
+                <span class="research-interests"> Distributed training systems:</span>: <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/2b4bfa1cebe78d125fefd7ea6ffcfc6d-Paper-Conference.pdf">AMP (Neurips'22)</a>, 
+                <a href="https://openreview.net/pdf?id=pUEDkZyPDl">DistFlashAttn (COLM'24)</a>, <a href="https://arxiv.org/pdf/2408.10188">LongVILA (ICLR'25)</a>, <a href="https://proceedings.mlsys.org/paper_files/paper/2024/file/71381211d0abef73ed1887b83c4547b1-Paper-Conference.pdf">MCBench (MLsys'24)</a>
+                are distributed training systems for LLMs under heterogeneous hardware, long context, visual-language models and model parallelism compression. 
+                <br>
+                <span class="research-interests"> Distributed serving systems:</span>: <a href="https://arxiv.org/pdf/2211.01452">MPCFormer (ICLR'23)</a> and <a href="https://arxiv.org/pdf/2408.03561">Marill (Arxiv'24)</a> accelerates the inference of LLMs for private and secure inference.
+                 <a href="https://www.usenix.org/conference/osdi24/presentation/sheng">VTC (OSDI'24)</a> and <a href="https://arxiv.org/pdf/2501.14312"> DLPM (Arxiv'25)</a> are distributed systems for LLM fair scheduling. <a href="https://arxiv.org/pdf/2311.03285">S-lora (MLsys'24)</a> is a distributed serving system for LoRA.
+                <br><br>
+                <span style="color: #002676; font-size: 20px; font-weight: bold;">Machine Learning (ML)</span>
+                <br>
+                <span class="research-interests"> Large Language Models:</span> <a href="https://arxiv.org/pdf/2306.05685"> LLM-as-a-judge (Neurips'23)</a> is one of the foundations of LLMs applications. <a href="https://openreview.net/pdf?id=LywifFNXV5">LongChat (Neurips'23 workshop)</a> is a long-context LLM. <a href="https://arxiv.org/pdf/2502.07374">Sky-T1 (Arxiv'25)</a> is an open large reasoning model with o1 performance trained within academic budget. <a href="https://arxiv.org/pdf/2502.08235">Overthinking (Arxiv'25)</a> reveals the Reasoning-Action Dilemma in
+                Agentic Tasks.
+                <br>
+                <span class="research-interests"> Computer Vision:</span> <a href="https://arxiv.org/pdf/2011.10063">DC-VAE (CVPR'21)</a> is the first VAE that can perform image synthesis at GAN level. <a href="https://arxiv.org/pdf/2502.06155">Efficient-Vdit (Arxiv'25)</a> and <a href="https://arxiv.org/pdf/2502.01776">SparseVideoGen (Arxiv'25)</a> are efficient video generation models.
+                <br>
+                <span class="research-interests"> Visual Language Models:</span> <a href="https://arxiv.org/pdf/2409.04429"> VILA-U (ICLR'25)</a> and <a href="https://arxiv.org/pdf/2412.04468"> NVILA (Arxiv'25)</a> are efficient visual language models.
+                <br>
+                <span class="research-interests"> Evaluation:</span> <a href="https://arxiv.org/pdf/2403.04132"> Chatbot Arena (ICML'24)</a> is one of the most influential LLM chatbot evaluation platform. <a href="https://openreview.net/pdf?id=LywifFNXV5">LongEval (Neurips'23 workshop)</a> is a long-context LLM evaluation platform. <a href="https://arxiv.org/pdf/2406.14598">Sorry-Bench (ICLR'25)</a> is a systematic evaluation of LLM refusal.
+              </p>
             </td>
           </tr>
         </table>
         
         <!-- Researches -->
-
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
-          <!-- Projects -->
-          <tr>
-            <td width="25%" id="arena_arxiv-img"></td>
-            <td valign="top" width="75%" id="arena_arxiv-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "arena_arxiv", {
-              title: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
-              paper_url: "https://arxiv.org/pdf/2403.04132.pdf",
-              authors: "Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, Anastasios N. Angelopoulos, Tianle Li, <b>Dacheng Li</b>, Banghua Zhu, Hao Zhang, Michael I. Jordan, Joseph E. Gonzalez, Ion Stoica",
-              conference: "ICML'24",
-              image: "figures/chatbot_arena.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="fairness_arxiv-img"></td>
-            <td valign="top" width="75%" id="fairness_arxiv-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "fairness_arxiv", {
-              title: "Fairness in Serving Large Language Models",
-              paper_url: "https://arxiv.org/pdf/2401.00588.pdf",
-              authors: "Ying Sheng, Shiyi Cao, <b>Dacheng Li</b>, Banghua Zhu, Zhuohan Li, Danyang Zhuo, Joseph E. Gonzalez, Ion Stoica",
-              conference: "OSDI'24",
-              image: "figures/fairness.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="Slora_arxiv-img"></td>
-            <td valign="top" width="75%" id="Slora_arxiv-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "Slora_arxiv", {
-              title: "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
-              paper_url: "https://arxiv.org/pdf/2311.03285.pdf",
-              authors: "Ying Sheng*, Shiyi Cao*, <b>Dacheng Li</b>, Coleman Hooper, Nicholas Lee, Shuo Yang, Christopher Chou, Banghua Zhu, Lianmin Zheng, Kurt Keutzer, Joseph E. Gonzalez, Ion Stoica",
-              conference: "MLsys'24",
-              image: "figures/Slora.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="lightseq_arxiv-img"></td>
-            <td valign="top" width="75%" id="lightseq_arxiv-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "lightseq_arxiv", {
-              title: "LightSeq: sequence level parallelism for distributed training of long context transformers",
-              paper_url: "https://arxiv.org/pdf/2310.03294.pdf",
-              authors: "<b>Dacheng Li*</b>, Rulin Shao*, Anze Xie, Eric P. Xing, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, Hao Zhang",
-              conference: "Under submission to ICLR'24",
-              image: "figures/LightSeq.png",
-              others: null
-            });
-          </script>
-
-          <tr>
-            <td width="25%" id="longchat_nips23-img"></td>
-            <td valign="top" width="75%" id="longchat_nips23-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "longchat_nips23", {
-              title: "How long can opensource llms truly promise on context length",
-              paper_url: "https://lmsys.org/blog/2023-06-29-longchat/",
-              authors: "<b> Dacheng Li*</b>, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, and Hao Zhang",
-              conference: "NeurIPS 2023 Instruction following workshop",
-              image: "figures/LongChat.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="amp_nips22-img"></td>
-            <td valign="top" width="75%" id="amp_nips22-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "amp_nips22", {
-              title: "AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness",
-              paper_url: "https://arxiv.org/abs/2210.07297",
-              authors: "<b> Dacheng Li </b>, Hongyi Wang, Eric P. Xing, Hao Zhang",
-              conference: "36th Conference on Neural Information Processing Systems (NeurIPS 2022)",
-              image: "figures/amp_nips22.PNG",
-              others: null
-            });
-          </script>
-          
-           <tr>
-            <td width="25%" id="dcvae_cvpr21-img"></td>
-            <td valign="top" width="75%" id="dcvae_cvpr21-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "dcvae_cvpr21", {
-              title: "Dual Contradistinctive Generative AutoEncoder",
-              paper_url: "https://openaccess.thecvf.com/content/CVPR2021/papers/Parmar_Dual_Contradistinctive_Generative_Autoencoder_CVPR_2021_paper.pdf",
-              authors: "Gaurav Parmar*, <b> Dacheng Li* </b>, Kwonjoon Lee*, Zhuowen Tu",
-              conference: "2021 Conference on Computer Vision and Pattern Recognition (CVPR 2021)",
-              image: "figures/dcvae_cvpr21.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="mpcformer_iclr23-img"></td>
-            <td valign="top" width="75%" id="mpcformer_iclr23-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "mpcformer_iclr23", {
-              title: "MPCFORMER: FAST, PERFORMANT AND PRIVATE TRANSFORMER INFERENCE WITH MPC",
-              paper_url: "http://arxiv.org/abs/2211.01452",
-              authors: "<b> Dacheng Li* </b>, Rulin Shao*, Hongyi Wang*, Han Guo, Eric P. Xing, Hao Zhang",
-              conference: "ICLR'23 (Spotlight)",
-              image: "figures/mpcformer_iclr23.PNG",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="vicuna_arxiv23-img"></td>
-            <td valign="top" width="75%" id="vicuna_arxiv23-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "vicuna_arxiv23", {
-              title: "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena",
-              paper_url: "https://arxiv.org/pdf/2306.05685.pdf",
-              authors: "Zheng Lianmin*, Wei-Lin Chiang*, Ying Sheng*, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, <b> Dacheng Li </b>, Eric. P Xing, Hao Zhang, Joseph E. Gonzalez, Ion Stoica",
-              conference: "Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 23)",
-              image: "figures/vicuna_arxiv.png",
-              others: null
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="compression_mlsys23-img"></td>
-            <td valign="top" width="75%" id="compression_mlsys23-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "compression_mlsys23", {
-              title: "Does compressing activations help model parallel training?",
-              paper_url: "https://arxiv.org/pdf/2301.02654.pdf",
-              authors: "Song Bian*, <b> Dacheng Li* </b>, Hongyi Wang, Eric P. Xing, Shivaram Venkataraman",
-              conference: "MLSys'24",
-              image: "figures/compression_mlsys23.PNG",
-              others: null
-            });
-          </script>
-
           <!-- Awards -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <heading>Awards</heading>
-              <!-- <p>
-                I'm interested in computer vision, machine learning, statistics, optimization, image processing, virtual reality, and computational photography. Much of my research is about inferring the physical world (shape, depth, motion, paint,
-                light, colors, etc) from images. I have also worked in astronomy and biology. Representative papers are <span class="highlight">highlighted</span>.
-              </p> -->
+              <ul style="margin: 0; padding-left: 20px;">
+                <li><a href="https://blogs.nvidia.com/blog/graduate-fellowship-recipients-2025-2026/">Nvidia Graduate Fellowship Finalist</a>, 2025-2026</li>
+                <li><a href="https://www.amd.com/en/amd-research-awards"> AMD AI & HPC Cluster Award</a>, 2025</li>
+                <li><a href="https://www.amazon.science/research-awards">Amazon Research Awards</a>, 2022</li>
+              </ul>
             </td>
           </tr>
         </table>
 
+        <!-- Media Press -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
           <tr>
-            <td width="25%" id="secure_inference_ara-img"></td>
-            <td valign="top" width="75%" id="secure_inference_ara-txt"></td>
+            <td width="100%" valign="middle">
+              <heading>Media Press</heading>
+              <ul style="margin: 0; padding-left: 20px;">
+                <li>Sky-T1 covered by <a href="https://www.nytimes.com/2025/01/23/technology/deepseek-china-ai-chips.html">New York Times</a>, <a href="https://www.wsj.com/tech/ai/why-distillation-has-become-the-scariest-wordfor-ai-companies-aa146ae3">Wall Street Journal</a>, and <a href="https://www.theinformation.com/articles/why-its-cheap-and-easy-to-mimic-openais-reasoning-model">The Information</a>.</li>
+              </ul>
+            </td>
           </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "secure_inference_ara", {
-              title: "A Faster and More Accurate Secure Model Serving Framework on the Cloud",
-              authors: "PI: Eric P. Xing",
-              paper_url: "awards/amazon_funding_secure_serving.pdf",
-              conference: "Amazon Research Awards ($80000)",
-              image: "figures/secure_inference_ara.PNG",
-              others: null
-            });
-          </script>
-          
-          <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-7580334-1");
-              pageTracker._trackPageview();
-            } catch (err) {}
-          </script>
+        </table>
+
+        <!-- Student Recruitment -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Mentorship</heading>
+              <p>
+                Beyond research collaboration, I commit seriously to mentoring junior students. If you are serious about working with me, please fill out this <a href="https://docs.google.com/forms/d/1up3XPz_-fcihmxu7vRQquGUafPA5wBr6yOtAodZ35gM/edit">form</a>.
+                We will have regular meetings and we will succeeed.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+  <!-- News section at the very end -->
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="20">
+    <tr>
+      <td width="100%" valign="middle">
+        <heading>News</heading>
+        <div class="news-container" style="max-height: none; background-color: transparent; border: none; box-shadow: none;">
+          <ul style="margin: 0; padding-left: 20px;">
+          <li> <b>2025-1</b> Released <a href="https://novasky-ai.github.io/posts/sky-t1/" > Sky-T1-32B-Preview </a>, a fully open-sourced reasoning model.  </li>
+          <li> <b>2025-1</b> Started <a href="https://novasky-ai.github.io/posts/about-us/" > NovaSky </a> that targets the next-generation of open AI models.  </li>
+          <li> <b>2025-1</b> <a href="https://arxiv.org/pdf/2408.10188">LongVILA</a>, <a href="https://arxiv.org/pdf/2409.04429">VILA-U</a>, and <a href="https://arxiv.org/pdf/2502.06155">Sorry-Bench</a> are accepted to ICLR'25.  </li>
+          <li> <b>2024-12</b> Honored to receive the finalist award from <a href="https://blogs.nvidia.com/blog/graduate-fellowship-recipients-2025-2026/" > Nvidia 2025-2026 Fellowship</a>.  </li>
+          <li> <b>2024-08</b> Released <a href="https://www.arxiv.org/pdf/2408.10188"> LongVila</a>, a seris of long-context VLM for videos. </li>
+          <li> <b>2024-08</b> Released <a href="https://arxiv.org/pdf/2408.03561"> Marill</a>, an efficient MPC framework for LLMs, extending the idea in MPCFormer. </li>
+          <li> <b>2024-07</b> <a href="https://arxiv.org/pdf/2310.03294">DistFlashAttn</a> is accepted to <i>COLM'2024</i>. </li>
+          <li> <b>2024-06</b> Joined Nvidia as a research intern, working on multi-modal foundation models with Prof. Han. </li>
+          <li> <b>2024-05</b> <a href="https://arxiv.org/pdf/2403.04132"> Chatbot Arena</a> is accepted to <i>ICML'2024</i>. </li>
+          <li> <b>2024-03</b> <a href="https://arxiv.org/pdf/2401.00588"> VTC</a> is accepted to <i>OSDI'2024</i>. </li>
+          <li> <b>2024-02</b> <a href="https://arxiv.org/pdf/2311.03285"> S-lora</a> and <a href="https://proceedings.mlsys.org/paper_files/paper/2024/file/71381211d0abef73ed1887b83c4547b1-Paper-Conference.pdf"> MCBench</a> are accepted to <i>MLsys'2024</i>. </li>
+          <li> <b>2023-09</b> The official paper of <a href="https://lmsys.org/blog/2023-03-30-vicuna/">Vicuna</a> (<a href="https://arxiv.org/pdf/2306.05685">LLM-as-a-judge</a>) is accepted to <i>Neurips'2024</i>. </li>
+          <li> <b>2023-08</b> Joined Google as a student researcher, working on LLMs evaluation. </li>
+          <li> <b>2023-06</b> Released a series of long-context models and evaluation toolkits <a href="https://github.com/DachengLi1/LongChat">LongChat</a>. </li>
+          <li> <b>2023-04</b> Released a compact open-sourced chatbot <a href="https://github.com/lm-sys/FastChat">FastChat-T5</a>.</li>
+          <li> <b>2023-01</b> <a href="https://arxiv.org/pdf/2211.01452">MPCFormer</a> is accepted at <i>ICLR'2023</i> as spotlight. </li>
+          <li> <b>2022-12</b> A secure LLMs serving proposal is accepted at Amazon Research Awards. </li>
+          <li> <b>2022-10</b> <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/2b4bfa1cebe78d125fefd7ea6ffcfc6d-Paper-Conference.pdf">AMP</a> is accepeted at <i>Neurips'2022</i>. </li>
+          <li> <b>2021-03</b> <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Parmar_Dual_Contradistinctive_Generative_Autoencoder_CVPR_2021_paper.pdf">DC-VAE</a> is accepted at <i>CVPR'2021</i>. </li>
+          </ul>
+        </div>
       </td>
     </tr>
   </table>
